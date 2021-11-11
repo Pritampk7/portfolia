@@ -31,9 +31,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/style.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/flaticon.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
