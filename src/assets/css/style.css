@@ -8166,7 +8166,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light {
   background: transparent !important;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   right: 0;
@@ -9046,8 +9046,9 @@ textarea.form-control {
       padding-bottom: 5em; } }
 
 .ftco-animate {
-  opacity: 0;
-  visibility: hidden; }
+  /* opacity: 0;
+  visibility: hidden;  */
+}
 
 .bg-primary {
   background: #3e64ff !important; }
