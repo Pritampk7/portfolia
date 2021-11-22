@@ -2,7 +2,27 @@
   // margin-top: 5rem
   height: calc(100vh - 85px);
 
-  div {
+  .container {
     height: 100%;
+
+    .ftco-about-content {
+      height: 100%;
+
+      .info {
+        height: 100%;
+
+        .ftco-animate {
+          flex-direction: column;
+          gap: 4rem;
+        }
+      }
+
+      .author-image {
+        display: flex;
+        @media (max-width: 767.98px) {
+          display: none;
+        }
+      }
+    }
   }
 }
