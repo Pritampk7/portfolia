@@ -48,7 +48,9 @@
 								<span class="subheading">Hey! I am</span>
 								<h1>Sujit Patil</h1>
 								<h2>I'm a
-									<span class="txt-rotate">Web Developer</span>
+									<span class="txt-rotate" (click)="open()"
+										style="cursor: pointer;">Web
+										Developer</span>
 								</h2>
 							</div>
 							<div class="text">
@@ -145,21 +147,26 @@
 
 					<div id="page-2" class="page two">
 						<h2 class="heading">Experience</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div
-								class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+						<ng-container *ngFor="let exp of experience">
+							<div class="resume-wrap d-flex ftco-animate">
+								<div
+									class="icon d-flex align-items-center justify-content-center">
+									<span class="flaticon-ideas"></span>
+								</div>
+								<div class="text pl-3">
+									<span class="date">{{exp.date}}</span>
+									<h2>{{exp.position}}</h2>
+									<span class="position">{{exp.company}}</span>
+									<!-- do not remove this -->
+									<!-- <ul>
+										<ng-container
+											*ngFor="let work of exp.work">
+											<li>{{work}}</li>
+										</ng-container>
+									</ul> -->
+								</div>
 							</div>
-							<div class="text pl-3">
-								<span class="date">2014-2015</span>
-								<h2>Software Developer</h2>
-								<span class="position">Cambridge University</span>
-								<p>A small river named Duden flows by their place and
-									supplies it with the necessary regelialia. It is
-									a paradisematic country, in which roasted parts
-									of sentences fly into your mouth.</p>
-							</div>
-						</div>
+						</ng-container>
 
 					</div>
 					<div id="page-1" class="page one">
