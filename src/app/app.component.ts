@@ -75,6 +75,13 @@ export class AppComponent {
     },
   ]
 
+  projects = [
+    { name: 'The Artist Circle', image: 'TheArtistCircle-Artist-Listing-Page.png', area: 'Web Development' },
+    { name: 'Diagnoser Tool', image: 'Awak-setup-tab.png', area: 'Desktop App Development' },
+    { name: 'Dcipher Liife E-com Website', image: 'DcipherLiife-Shopping-Website-Landing-Page.png', area: 'Web Development' },
+    { name: 'Weather App', image: 'DcipherLiife-Shopping-Website-Landing-Page.png', area: 'Web Development' },
+  ]
+
   open() {
     window.open('https://en.wikipedia.org/wiki/Web_developer')
   }
