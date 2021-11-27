@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 
-interface ISkills {
-  primary: { name: string, value: String }[],
-  secondary: { name: string, value: String }[],
+interface ISkill {
+  primary: { name: string, value: string }[],
+  secondary: { name: string, value: string }[],
 }
 interface IExperience {
-  company: string, date: String, position: String, work: String[],
+  company: string, date: string, position: string, work: string[],
+}
+interface IProject {
+  name: string, image: string, area: string
+}
+interface IBlog {
+  title: string, subTitle: string, date: string, url: string, image: string
 }
 @Component({
   selector: 'app-root',
@@ -15,7 +21,7 @@ interface IExperience {
 export class AppComponent {
   title = 'portfolio';
 
-  skills: ISkills = {
+  skills: ISkill = {
     primary: [
       { name: 'Angular', value: '90' },
       { name: 'JavaScript', value: '75' },
@@ -75,14 +81,38 @@ export class AppComponent {
     },
   ]
 
-  projects = [
+  projects: IProject[] = [
     { name: 'The Artist Circle', image: 'TheArtistCircle-Artist-Listing-Page.png', area: 'Web Development' },
     { name: 'Diagnoser Tool', image: 'Awak-setup-tab.png', area: 'Desktop App Development' },
-    { name: 'Dcipher Liife E-com Website', image: 'DcipherLiife-Shopping-Website-Landing-Page.png', area: 'Web Development' },
+    { name: 'E-commerce Website', image: 'DcipherLiife-Shopping-Website-Landing-Page.png', area: 'Web Development' },
     { name: 'Weather App', image: 'DcipherLiife-Shopping-Website-Landing-Page.png', area: 'Web Development' },
   ]
 
-  open() {
-    window.open('https://en.wikipedia.org/wiki/Web_developer')
+  blogs: IBlog[] = [
+    {
+      title: 'MongoDB Client-Side Field Level Encryption (CSFLE) for Beginners',
+      subTitle: 'Add an extra layer of security to your application.',
+      date: 'Sep 7, 2021',
+      image: 'laptop.jpeg',
+      url: 'https://javascript.plainenglish.io/mongodb-client-side-field-level-encryption-csfle-for-beginners-5eed965d4ba3',
+    },
+    {
+      title: '12 Useful VS Code Extensions to Help Make Web Development Easier',
+      subTitle: 'Boost your productivity as a developer.',
+      date: 'Jun 20, 2021',
+      image: 'code_editor.jpeg',
+      url: 'https://javascript.plainenglish.io/12-useful-vs-code-extensions-to-help-make-web-development-easier-6960680c56d4',
+    },
+    {
+      title: 'Using the ng2-tel-input Package in Angular',
+      subTitle: 'A modern, configurable international telephone input',
+      date: 'Apr 4, 2021',
+      image: 'phone.jpeg',
+      url: 'https://javascript.plainenglish.io/using-ng2-tel-input-in-angular-aa33c3ced92f',
+    },
+  ];
+
+  open(url: string) {
+    window.open(url)
   }
 }
