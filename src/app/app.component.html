@@ -83,56 +83,61 @@
 					<div id="page-3" class="page three">
 						<h2 class="heading">Skills</h2>
 						<div class="row progress-circle mb-5">
-							<div class="col-lg-4 mb-4">
-								<div class="bg-white rounded-lg shadow p-4">
-									<h2
-										class="h5 font-weight-bold text-center mb-4">
-										CSS</h2>
+							<ng-container *ngFor="let skill of skills.primary; ">
+								<div class="col-lg-4 mb-4">
+									<div class="bg-white rounded-lg shadow p-4">
+										<h2
+											class="h5 font-weight-bold text-center mb-4">
+											{{skill.name}}</h2>
 
-									<!-- Progress bar 1 -->
-									<div class="progress mx-auto" data-value='90'>
-										<span class="progress-left">
-											<span
-												class="progress-bar border-primary"></span>
-										</span>
-										<span class="progress-right">
-											<span
-												class="progress-bar border-primary"></span>
-										</span>
-										<div
-											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+										<!-- Progress bar 1 -->
+										<div class="progress mx-auto"
+											[attr.data-value]='skill.value'>
+											<span class="progress-left">
+												<span
+													class="progress-bar border-primary"></span>
+											</span>
+											<span class="progress-right">
+												<span
+													class="progress-bar border-primary"></span>
+											</span>
 											<div
-												class="h2 font-weight-bold">
-												90<sup
-													class="small">%</sup>
+												class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+												<div
+													class="h2 font-weight-bold">
+													{{skill.value}}<sup
+														class="small">%</sup>
+												</div>
 											</div>
 										</div>
+										<!-- END -->
+
+										<!-- Demo info -->
+
+										<!-- END -->
 									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-
-									<!-- END -->
 								</div>
-							</div>
+							</ng-container>
 
 						</div>
 						<div class="row">
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Photoshop</h3>
-									<div class="progress">
-										<div class="progress-bar color-1"
-											role="progressbar"
-											aria-valuenow="90"
-											aria-valuemin="0"
-											aria-valuemax="100"
-											style="width:90%">
-											<span>90%</span>
+							<ng-container *ngFor="let skill of skills.secondary; ">
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>{{skill.name}}</h3>
+										<div class="progress">
+											<div class="progress-bar color-1"
+												role="progressbar"
+												[attr.aria-valuenow]="skill.value"
+												aria-valuemin="0"
+												aria-valuemax="100"
+												[style]="'width:'+skill.value+'%'">
+												<span>{{skill.value}}%</span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+							</ng-container>
 
 						</div>
 					</div>
