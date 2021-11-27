@@ -28,11 +28,39 @@
 }
 
 .ftco-project {
-  .colums {
-    padding: 1rem;
-    .project {
-      background-size: contain !important;
+  .project-images {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .image {
       box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+      width: 33%;
+      height: 630px;
+      .img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.blog-section {
+  .container {
+    max-width: 100%;
+    .blog-container {
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      .ftco-animate {
+        max-width: 31%;
+        .blog-entry {
+          box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+          .text {
+            padding: 1rem;
+          }
+        }
+      }
     }
   }
 }
