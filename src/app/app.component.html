@@ -101,6 +101,26 @@
 		</div>
 	</section>
 
+	<section class="ftco-section ftco-project" id="projects-section">
+		<div class="container-fluid px-md-0">
+			<div class="row no-gutters justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+				</div>
+			</div>
+			<div class="project-images">
+				<ng-container *ngFor="let project of projects">
+					<div class="image">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center"
+							[style]="'background-image: url(../assets/images/'+project.image+');'">
+						</div>
+					</div>
+				</ng-container>
+			</div>
+		</div>
+	</section>
+
 	<section class="ftco-section" id="services-section">
 		<div class="container-fluid px-md-5">
 			<div class="row justify-content-center py-5 mt-5">
@@ -188,30 +208,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	<section class="ftco-section ftco-project" id="projects-section">
-		<div class="container-fluid px-md-0">
-			<div class="row no-gutters justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Projects</h1>
-					<h2 class="mb-4">Projects</h2>
-				</div>
-			</div>
-			<div class="project-images">
-				<ng-container *ngFor="let project of projects">
-					<div class="image">
-						<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-							[style]="'background-image: url(../assets/images/'+project.image+');'">
-						</div>
-					</div>
-				</ng-container>
-			</div>
-		</div>
-	</section>
-
-
-
 
 	<section class="ftco-section blog-section" id="blog-section">
 		<div class="container">
