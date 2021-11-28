@@ -1,4 +1,6 @@
 .ftco-about {
+  background-color: #f6f6f6;
+
   // margin-top: 5rem
   height: calc(100vh - 85px);
 
@@ -21,6 +23,16 @@
         display: flex;
         @media (max-width: 767.98px) {
           display: none;
+        }
+      }
+
+      .cv-container {
+        display: flex;
+        gap: 1rem;
+
+        .contact {
+          background: white;
+          color: #3e64ff !important;
         }
       }
     }
