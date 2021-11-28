@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 
 interface ISkill {
-  primary: { name: string, value: string }[],
-  secondary: { name: string, value: string }[],
+  name: string, icon: string,
 }
 interface IExperience {
   company: string, date: string, position: string, work: string[],
@@ -21,22 +20,22 @@ interface IBlog {
 export class AppComponent {
   title = 'portfolio';
 
-  skills: ISkill = {
-    primary: [
-      { name: 'Angular', value: '90' },
-      { name: 'JavaScript', value: '75' },
-      { name: 'Node.js', value: '70' },
-    ],
-    secondary: [
-      { name: 'HTML', value: '85' },
-      { name: 'Express.js', value: '70' },
-      { name: 'CSS', value: '80' },
-      { name: 'MongoDB', value: '60' },
-      { name: 'SASS', value: '75' },
-      { name: 'AWS', value: '30' },
-      { name: 'Electron.js', value: '60' },
-    ]
-  }
+  skills: ISkill[] = [
+    { name: 'Angular', icon: 'cib-angular' },
+    { name: 'JavaScript', icon: 'cib-javascript' },
+    { name: 'Node.js', icon: 'icons8-nodejs' },
+    { name: 'MongoDB', icon: 'cib-mongodb' },
+    { name: 'Electron.js', icon: 'cib-electron' },
+    { name: 'AWS', icon: 'cib-amazon-aws' },
+    { name: 'HTML', icon: 'cib-html5' },
+    { name: 'CSS', icon: 'cib-css3' },
+    { name: 'SASS', icon: 'cib-sass' },
+    { name: 'TypeScript', icon: 'cib-typescript' },
+    { name: 'RxJs', icon: 'RxJs_Logo_Black' },
+    { name: 'Adobe XD', icon: 'cib-adobe-xd' },
+  ]
+
+
 
   experience: IExperience[] = [
     {

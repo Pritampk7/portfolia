@@ -35,6 +35,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    max-width: 1600px;
     .image {
       box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
       width: 40%;
@@ -64,6 +65,21 @@
           }
         }
       }
+    }
+  }
+}
+
+.skill-section {
+  .technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    .skill {
+    }
+    img {
+      height: 60px;
     }
   }
 }
