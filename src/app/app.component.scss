@@ -28,18 +28,21 @@
 }
 
 .ftco-project {
+  background-color: #f6f6f6;
   .project-images {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     .image {
       box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
-      width: 33%;
-      height: 630px;
+      width: 40%;
+      height: 742px;
+      cursor: pointer;
       .img {
         height: 100%;
+        border-radius: 0.5rem;
       }
     }
   }
