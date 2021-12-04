@@ -30,6 +30,12 @@
         display: flex;
         gap: 1rem;
 
+        .btn {
+          background: #3e64ff;
+          border: 1px solid #3e64ff !important;
+          color: #fff !important;
+        }
+
         .contact {
           background: white;
           color: #3e64ff !important;
