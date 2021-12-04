@@ -81,10 +81,10 @@ export class AppComponent {
   ]
 
   projects: IProject[] = [
-    { name: 'The Artist Circle', image: '2.png', area: 'Web Development' },
-    { name: 'Diagnoser Tool', image: '1.png', area: 'Desktop App Development' },
-    { name: 'E-commerce Website', image: '3.png', area: 'Web Development' },
     { name: 'E-commerce Website', image: '4.png', area: 'Web Development' },
+    { name: 'Diagnoser Tool', image: '1.png', area: 'Desktop App Development' },
+    { name: 'The Artist Circle', image: '2.png', area: 'Web Development' },
+    { name: 'E-commerce Website', image: '3.png', area: 'Web Development' },
     { name: 'E-commerce Website', image: '5.png', area: 'Web Development' },
   ]
 

@@ -51,7 +51,7 @@
     .image {
       box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
       width: 40%;
-      height: 742px;
+      height: 850px;
       cursor: pointer;
       .img {
         height: 100%;
@@ -106,15 +106,7 @@
     #061161,
     #780206
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #061161,
-    #780206
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // background: linear-gradient(to right, #fff 20%, #ff0 40%, #ff0 60%, #fff 80%);
+  background: linear-gradient(to right, #061161, #780206);
   background-size: 200% auto;
 
   color: #000;
