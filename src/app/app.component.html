@@ -60,9 +60,12 @@
 								<div class="btn  py-3 px-3">Download
 									CV
 								</div>
-								<div (click)="openSnackBar()"
+								<div (click)="copyEmail()"
+									matTooltip="Copy Email Address"
+									matTooltipPosition="below"
+									matTooltipHideDelay="100"
 									class="btn  py-3 px-3 contact">
-									connectwithsujit@gmail.com
+									{{email}}
 								</div>
 							</div>
 						</div>

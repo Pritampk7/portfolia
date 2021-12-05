@@ -113,18 +113,21 @@ export class AppComponent {
     },
   ];
 
+  email = 'connectwithsujit@gmail.com'
+
   constructor(private _snackBar: MatSnackBar) { }
 
   open(url: string) {
     window.open(url)
   }
 
-  openSnackBar() {
-    this._snackBar.open('Email Copied', '', {
-      duration: 300,
-      panelClass: 'success-notification-overlay',
-      horizontalPosition: 'center',
-      verticalPosition: 'top'
-    });
+  copyEmail() {
+    navigator.clipboard.writeText(this.email)
+    // this._snackBar.open('Email Copied', '', {
+    //   duration: 300,
+    //   panelClass: 'success-notification-overlay',
+    //   horizontalPosition: 'center',
+    //   verticalPosition: 'top'
+    // });
   }
 }
