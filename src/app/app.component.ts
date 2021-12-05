@@ -130,4 +130,14 @@ export class AppComponent {
     //   verticalPosition: 'top'
     // });
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.setAttribute('type', 'hidden');
+    link.href = "../assets/images/Resume.pdf";
+    link.download = 'Sujits_Resume_(2021).pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 }
