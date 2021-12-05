@@ -113,6 +113,13 @@ export class AppComponent {
     },
   ];
 
+  socialLinks = [
+    { icon: 'cib-linkedin', link: 'https://www.linkedin.com/in/sujit-patil-47468a130/' },
+    { icon: 'cib-medium', link: 'https://sujit-patil.medium.com/' },
+    { icon: 'cib-github', link: 'https://github.com/sujitpatil72' },
+    { icon: 'cib-twitter', link: 'https://twitter.com/SUJITPA25205332' },
+  ]
+
   email = 'connectwithsujit@gmail.com'
 
   constructor(private _snackBar: MatSnackBar) { }
