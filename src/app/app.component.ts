@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface ISkill {
   name: string, icon: string,
@@ -112,7 +113,18 @@ export class AppComponent {
     },
   ];
 
+  constructor(private _snackBar: MatSnackBar) { }
+
   open(url: string) {
     window.open(url)
+  }
+
+  openSnackBar() {
+    this._snackBar.open('Email Copied', '', {
+      duration: 300,
+      panelClass: 'success-notification-overlay',
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
+    });
   }
 }
