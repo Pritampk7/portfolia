@@ -170,7 +170,7 @@
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
+			<div class="row justify-content-center pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Contact</h1>
 					<h2 class="mb-4">Contact Me</h2>
@@ -179,7 +179,10 @@
 
 			<div class="row no-gutters block-9 " style="display: flex;justify-content: center;">
 				<div class="col-md-6 order-md-last d-flex">
-					<!-- <form action="#" class="bg-light p-4 p-md-5 contact-form">
+					<form class="bg-light p-4 p-md-2 contact-form" name="contact" method="POST"
+						data-netlify="true" style="text-align: center;">
+						<input type="hidden" name="form-name" value="contact">
+
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Your Name">
 						</div>
@@ -195,30 +198,7 @@
 							<input type="submit" value="Send Message"
 								class="btn btn-primary py-3 px-5">
 						</div>
-					</form> -->
-					<form name="contact" method="POST" data-netlify="true">
-						<input type="hidden" name="form-name" value="contact">
-
-						<p>
-							<label>Your Name: <input type="text" name="name" /></label>
-						</p>
-						<p>
-							<label>Your Email: <input type="email" name="email" /></label>
-						</p>
-						<p>
-							<label>Your Role: <select name="role[]" multiple>
-									<option value="leader">Leader</option>
-									<option value="follower">Follower</option>
-								</select></label>
-						</p>
-						<p>
-							<label>Message: <textarea name="message"></textarea></label>
-						</p>
-						<p>
-							<button type="submit">Send</button>
-						</p>
 					</form>
-
 
 				</div>
 
