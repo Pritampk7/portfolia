@@ -8,7 +8,7 @@ interface IExperience {
   company: string, date: string, position: string, work: string[],
 }
 interface IProject {
-  name: string, image: string, area: string
+  name: string, image: string, area: string, link: string
 }
 interface IBlog {
   title: string, subTitle: string, date: string, url: string, image: string
@@ -82,11 +82,11 @@ export class AppComponent {
   ]
 
   projects: IProject[] = [
-    { name: 'E-commerce Website', image: '4.png', area: 'Web Development' },
-    { name: 'Diagnoser Tool', image: '1.png', area: 'Desktop App Development' },
-    { name: 'The Artist Circle', image: '2.png', area: 'Web Development' },
-    { name: 'E-commerce Website', image: '3.png', area: 'Web Development' },
-    { name: 'E-commerce Website', image: '5.png', area: 'Web Development' },
+    { name: 'E-commerce Website', image: '4.png', area: 'Web Development', link: "https://dazzling-shirley-7ede16.netlify.app/" },
+    { name: 'Diagnoser Tool', image: '1.png', area: 'Desktop App Development', link: "" },
+    { name: 'The Artist Circle', image: '2.png', area: 'Web Development', link: '' },
+    { name: 'E-commerce Website', image: '3.png', area: 'Web Development', link: '' },
+    { name: 'E-commerce Website', image: '5.png', area: 'Web Development', link: 'https://modest-hodgkin-b19363.netlify.app/' },
   ]
 
   blogs: IBlog[] = [
@@ -113,7 +113,7 @@ export class AppComponent {
     },
   ];
 
-  socialLinks = [
+  socialLinks: { icon: String, link: string }[] = [
     { icon: 'cib-linkedin', link: 'https://www.linkedin.com/in/sujit-patil-47468a130/' },
     { icon: 'cib-medium', link: 'https://sujit-patil.medium.com/' },
     { icon: 'cib-github', link: 'https://github.com/sujitpatil72' },
@@ -125,6 +125,15 @@ export class AppComponent {
   constructor(private _snackBar: MatSnackBar) { }
 
   open(url: string) {
+    if (!url) {
+      this._snackBar.open('Link Not Available', '', {
+        duration: 300,
+        panelClass: 'error-notification-overlay',
+        horizontalPosition: 'center',
+        verticalPosition: 'top'
+      })
+      return
+    };
     window.open(url)
   }
 
