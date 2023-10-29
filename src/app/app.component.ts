@@ -2,41 +2,56 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface ISkill {
-  name: string, icon: string,
+  name: string;
+  icon: string;
 }
 interface IExperience {
-  company: string, date: string, position: string, work: string[],
+  company: string;
+  date: string;
+  position: string;
+  work: string[];
 }
 interface IProject {
-  name: string, image: string, area: string, link: string
+  name: string;
+  image: string;
+  area: string;
+  link: string;
 }
 interface IBlog {
-  title: string, subTitle: string, date: string, url: string, image: string
+  title: string;
+  subTitle: string;
+  date: string;
+  url: string;
+  image: string;
 }
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'portfolio';
 
   skills: ISkill[] = [
-    { name: 'Angular', icon: 'cib-angular' },
-    { name: 'JavaScript', icon: 'cib-javascript' },
-    { name: 'Node.js', icon: 'icons8-nodejs' },
-    { name: 'MongoDB', icon: 'cib-mongodb' },
-    { name: 'Electron.js', icon: 'cib-electron' },
-    { name: 'AWS', icon: 'cib-amazon-aws' },
+    { name: 'Adobe XD', icon: 'cib-adobe-xd' },
     { name: 'HTML', icon: 'cib-html5' },
     { name: 'CSS', icon: 'cib-css3' },
     { name: 'SASS', icon: 'cib-sass' },
-    { name: 'TypeScript', icon: 'cib-typescript' },
+    { name: 'Bootstrap', icon: 'cib-bootstrap' },
+    { name: 'Angular', icon: 'cib-angular' },
     { name: 'RxJs', icon: 'RxJs_Logo_Black' },
-    { name: 'Adobe XD', icon: 'cib-adobe-xd' },
-  ]
-
-
+    { name: 'React', icon: 'cib-react' },
+    { name: 'Redux', icon: 'cib-redux' },
+    { name: 'Next.js', icon: 'cib-next-js' },
+    { name: 'JavaScript', icon: 'cib-javascript' },
+    { name: 'TypeScript', icon: 'cib-typescript' },
+    { name: 'Electron.js', icon: 'cib-electron' },
+    { name: 'Node.js', icon: 'icons8-nodejs' },
+    { name: 'MongoDB', icon: 'cib-mongodb' },
+    { name: 'AWS', icon: 'cib-amazon-aws' },
+    { name: 'NGINIX', icon: 'cib-nginx' },
+    { name: 'Redis', icon: 'cib-redis' },
+  ];
 
   experience: IExperience[] = [
     {
@@ -48,11 +63,11 @@ export class AppComponent {
         'Built high performing application that steadily loads content.',
         'Added video calling feature with Opentok SDK which provides low latency and high fidelity.',
         'Improved customer experience by adding Speech to Text capability.',
-        'Implemented end to end dynamic questionnaire for Patient'
+        'Implemented end to end dynamic questionnaire for Patient',
       ],
     },
     {
-      company: "Hashtaag™ - KGJ Software Technologies",
+      company: 'Hashtaag™ - KGJ Software Technologies',
       date: '06/2019 - 09/2020',
       position: 'Angular Developer',
       work: [
@@ -62,7 +77,7 @@ export class AppComponent {
       ],
     },
     {
-      company: "Mahiti Infotech",
+      company: 'Mahiti Infotech',
       date: '08/2018 - 06/2019',
       position: 'Angular Developer',
       work: [
@@ -71,7 +86,7 @@ export class AppComponent {
       ],
     },
     {
-      company: "VebCrumbs Innovations",
+      company: 'VebCrumbs Innovations',
       date: '04/2017 - 05/2018',
       position: 'Full Stack Developer',
       work: [
@@ -79,15 +94,47 @@ export class AppComponent {
         'Manages different activities for students like creating student profile, adding academics, maintaining contacts.',
       ],
     },
-  ]
+  ];
 
   projects: IProject[] = [
-    { name: 'E-commerce Website', image: '4.png', area: 'Web Development', link: "https://dazzling-shirley-7ede16.netlify.app/" },
-    { name: 'Diagnoser Tool', image: '1.png', area: 'Desktop App Development', link: "" },
-    { name: 'The Artist Circle', image: '2.png', area: 'Web Development', link: '' },
-    { name: 'E-commerce Website', image: '3.png', area: 'Web Development', link: '' },
-    { name: 'E-commerce Website', image: '5.png', area: 'Web Development', link: 'https://modest-hodgkin-b19363.netlify.app/' },
-  ]
+    {
+      name: 'Pawzeeble',
+      image: 'pawzeeble.png',
+      area: 'Web Development',
+      link: 'https://pawzeeble.com',
+    },
+    {
+      name: 'The Artist Circle',
+      image: '2.png',
+      area: 'Web Development',
+      link: '',
+    },
+    {
+      name: 'Diagnoser Tool',
+      image: '1.png',
+      area: 'Desktop App Development',
+      link: '',
+    },
+
+    {
+      name: 'E-commerce Website',
+      image: '3.png',
+      area: 'Web Development',
+      link: '',
+    },
+    {
+      name: 'E-commerce Website',
+      image: '4.png',
+      area: 'Web Development',
+      link: '',
+    },
+    {
+      name: 'E-commerce Website',
+      image: '5.png',
+      area: 'Web Development',
+      link: 'https://modest-hodgkin-b19363.netlify.app/',
+    },
+  ];
 
   blogs: IBlog[] = [
     {
@@ -113,16 +160,19 @@ export class AppComponent {
     },
   ];
 
-  socialLinks: { icon: String, link: string }[] = [
-    { icon: 'cib-linkedin', link: 'https://www.linkedin.com/in/sujit-patil-47468a130/' },
+  socialLinks: { icon: String; link: string }[] = [
+    {
+      icon: 'cib-linkedin',
+      link: 'https://www.linkedin.com/in/sujit-patil-47468a130/',
+    },
     { icon: 'cib-medium', link: 'https://sujit-patil.medium.com/' },
     { icon: 'cib-github', link: 'https://github.com/sujitpatil72' },
     { icon: 'cib-twitter', link: 'https://twitter.com/SUJITPA25205332' },
-  ]
+  ];
 
-  email = 'connectwithsujit@gmail.com'
+  email = 'connectwithsujit@gmail.com';
 
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar) {}
 
   open(url: string) {
     if (!url) {
@@ -130,15 +180,15 @@ export class AppComponent {
         duration: 300,
         panelClass: 'error-notification-overlay',
         horizontalPosition: 'center',
-        verticalPosition: 'top'
-      })
-      return
-    };
-    window.open(url)
+        verticalPosition: 'top',
+      });
+      return;
+    }
+    window.open(url);
   }
 
   copyEmail() {
-    navigator.clipboard.writeText(this.email)
+    navigator.clipboard.writeText(this.email);
     // this._snackBar.open('Email Copied', '', {
     //   duration: 300,
     //   panelClass: 'success-notification-overlay',
@@ -150,7 +200,7 @@ export class AppComponent {
   downloadCV() {
     const link = document.createElement('a');
     link.setAttribute('type', 'hidden');
-    link.href = "../assets/images/Resume.pdf";
+    link.href = '../assets/images/Resume.pdf';
     link.download = 'Sujits_Resume_(2021).pdf';
     document.body.appendChild(link);
     link.click();
