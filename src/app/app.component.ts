@@ -33,24 +33,20 @@ export class AppComponent {
   title = 'portfolio';
 
   skills: ISkill[] = [
-    { name: 'Adobe XD', icon: 'cib-adobe-xd' },
-    { name: 'HTML', icon: 'cib-html5' },
-    { name: 'CSS', icon: 'cib-css3' },
-    { name: 'SASS', icon: 'cib-sass' },
-    { name: 'Bootstrap', icon: 'cib-bootstrap' },
-    { name: 'Angular', icon: 'cib-angular' },
-    { name: 'RxJs', icon: 'RxJs_Logo_Black' },
-    { name: 'React', icon: 'cib-react' },
-    { name: 'Redux', icon: 'cib-redux' },
-    { name: 'Next.js', icon: 'cib-next-js' },
-    { name: 'JavaScript', icon: 'cib-javascript' },
-    { name: 'TypeScript', icon: 'cib-typescript' },
-    { name: 'Electron.js', icon: 'cib-electron' },
-    { name: 'Node.js', icon: 'icons8-nodejs' },
-    { name: 'MongoDB', icon: 'cib-mongodb' },
-    { name: 'AWS', icon: 'cib-amazon-aws' },
-    { name: 'NGINIX', icon: 'cib-nginx' },
-    { name: 'Redis', icon: 'cib-redis' },
+    { name: 'Python', icon: 'cib-python' },
+    { name: 'Ansible', icon: 'cib-ansible' },
+    { name: 'Tower AWX', icon: 'ansible-awx' },
+    { name: 'Docker', icon: 'cib-docker' },
+    { name: 'Terraform', icon: 'cib-terraform' },
+    { name: 'Django', icon: 'cib-django' },
+    { name: 'Mysql', icon: 'cib-mysql' },
+    { name: 'Redhat', icon: 'cib-redhat' },
+    { name: 'Cisco', icon: 'cib-cisco' },
+    { name: 'GIT', icon: 'cib-git' },
+    { name: 'VMware', icon: 'vmware' },
+    { name: 'Jinja2', icon: 'jinja2' },
+
+  
   ];
 
   experience: IExperience[] = [
@@ -98,79 +94,58 @@ export class AppComponent {
 
   projects: IProject[] = [
     {
-      name: 'Pawzeeble',
-      image: 'pawzeeble.png',
-      area: 'Web Development',
-      link: 'https://pawzeeble.com',
+      name: 'Zilpanet',
+      image: 'zilpanet.jpg',
+      area: 'Network Automation',
+      link: 'https://gifted-swartz-d42b00.netlify.app/',
     },
     {
-      name: 'The Artist Circle',
-      image: '2.png',
-      area: 'Web Development',
+      name: 'Ciena blueplanet NAO tool',
+      image: 'bp.png',
+      area: 'Network Automation',
       link: '',
     },
     {
-      name: 'Diagnoser Tool',
-      image: '1.png',
-      area: 'Desktop App Development',
+      name: 'BMC Remdey workflow automationm',
+      image: 'remedy.png',
+      area: 'Workflow automation',
       link: '',
-    },
-
-    {
-      name: 'E-commerce Website',
-      image: '3.png',
-      area: 'Web Development',
-      link: '',
-    },
-    {
-      name: 'E-commerce Website',
-      image: '4.png',
-      area: 'Web Development',
-      link: '',
-    },
-    {
-      name: 'E-commerce Website',
-      image: '5.png',
-      area: 'Web Development',
-      link: 'https://modest-hodgkin-b19363.netlify.app/',
-    },
+    }
   ];
 
   blogs: IBlog[] = [
     {
-      title: 'MongoDB Client-Side Field Level Encryption (CSFLE) for Beginners',
-      subTitle: 'Add an extra layer of security to your application.',
-      date: 'Sep 7, 2021',
-      image: 'laptop.jpeg',
-      url: 'https://javascript.plainenglish.io/mongodb-client-side-field-level-encryption-csfle-for-beginners-5eed965d4ba3',
+      title: 'OpenConfig: Revolutionizing Network Automation and Management',
+      subTitle: 'ALl you need to know about setting up openconfig and Apply',
+      date: 'June 8, 2023',
+      image: 'oc.webp',
+      url: 'https://python.plainenglish.io/openconfig-revolutionizing-network-automation-and-management-1675d06f98ad',
     },
     {
-      title: '12 Useful VS Code Extensions to Help Make Web Development Easier',
-      subTitle: 'Boost your productivity as a developer.',
-      date: 'Jun 20, 2021',
-      image: 'code_editor.jpeg',
-      url: 'https://javascript.plainenglish.io/12-useful-vs-code-extensions-to-help-make-web-development-easier-6960680c56d4',
+      title: 'Ansible setup for Network Automation',
+      subTitle: 'The prerequisite you need for Ansible set up',
+      date: 'Nov 28, 2021',
+      image: 'ansible.webp',
+      url: 'https://medium.com/@pritamofficial7/ansible-setup-for-network-automation-5f8b12838bbd',
     },
     {
-      title: 'Using the ng2-tel-input Package in Angular',
-      subTitle: 'A modern, configurable international telephone input',
-      date: 'Apr 4, 2021',
-      image: 'phone.jpeg',
-      url: 'https://javascript.plainenglish.io/using-ng2-tel-input-in-angular-aa33c3ced92f',
+      title: 'The regular expression in a nutshell',
+      subTitle: 'The basics of regular expressions',
+      date: 'Nov 21, 2021',
+      image: 're.webp',
+      url: 'https://medium.com/@pritamofficial7/the-regular-expression-in-a-nutshell-87c4f700ec17',
     },
   ];
 
   socialLinks: { icon: String; link: string }[] = [
     {
       icon: 'cib-linkedin',
-      link: 'https://www.linkedin.com/in/sujit-patil-47468a130/',
+      link: 'www.linkedin.com/in/pritam-kalagekar-6971337b',
     },
-    { icon: 'cib-medium', link: 'https://sujit-patil.medium.com/' },
-    { icon: 'cib-github', link: 'https://github.com/sujitpatil72' },
-    { icon: 'cib-twitter', link: 'https://twitter.com/SUJITPA25205332' },
+    { icon: 'cib-medium', link: 'https://medium.com/@pritamofficial7' },
   ];
 
-  email = 'connectwithsujit@gmail.com';
+  email = 'pritamofficial7@gmail.com';
 
   constructor(private _snackBar: MatSnackBar) {}
 
@@ -201,7 +176,7 @@ export class AppComponent {
     const link = document.createElement('a');
     link.setAttribute('type', 'hidden');
     link.href = '../assets/images/Resume.pdf';
-    link.download = 'Sujits_Resume_(2021).pdf';
+    link.download = 'preetam"s resume.pdf';
     document.body.appendChild(link);
     link.click();
     link.remove();
